@@ -1,0 +1,36 @@
+/* Tạo hiệu ứng hoa mai/hoa đào rơi nhẹ làm nền */
+body {
+    background-image: radial-gradient(var(--gold) 1px, transparent 1px), radial-gradient(var(--tet-red) 1px, #f7f7f7 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+}
+
+/* Khu vực chứa tiêu đề và Mascot hai bên */
+.mascot-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.mascot-decor {
+    width: 70px; /* Kích thước vừa vặn để trang trí */
+    height: auto;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
+    animation: bounce 3s ease-in-out infinite alternate; /* Làm con vật nhún nhảy cho sinh động */
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+}
+
+/* Họa tiết ruy-băng góc thiệp */
+.decor-corner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--gold);
+}
+.top-left { top: 10px; left: 10px; border-right: none; border-bottom: none; border-top-left-radius: 10px;}
+.top-right { top: 10px; right: 10px; border-left: none; border-bottom: none; border-top-right-radius: 10px;}
